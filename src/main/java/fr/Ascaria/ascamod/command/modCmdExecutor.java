@@ -1,7 +1,7 @@
-package fr.gamer2082.ascamod.command;
+package fr.Ascaria.ascamod.command;
 
-import fr.gamer2082.ascamod.Ascamod;
-import fr.gamer2082.ascamod.managers.playerManagers;
+import fr.Ascaria.ascamod.Ascamod;
+import fr.Ascaria.ascamod.managers.playerManagers;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

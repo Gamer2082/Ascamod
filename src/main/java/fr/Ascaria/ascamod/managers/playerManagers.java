@@ -1,7 +1,7 @@
-package fr.gamer2082.ascamod.managers;
+package fr.Ascaria.ascamod.managers;
 
-import fr.gamer2082.ascamod.Ascamod;
-import fr.gamer2082.ascamod.utils.ItemBuilder;
+import fr.Ascaria.ascamod.Ascamod;
+import fr.Ascaria.ascamod.utils.ItemBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;

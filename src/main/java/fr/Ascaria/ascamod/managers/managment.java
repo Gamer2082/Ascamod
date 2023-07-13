@@ -1,4 +1,4 @@
-package fr.gamer2082.ascamod.managers;
+package fr.Ascaria.ascamod.managers;
 
 public class managment {
     public static void load(){

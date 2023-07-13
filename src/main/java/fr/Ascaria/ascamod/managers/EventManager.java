@@ -1,9 +1,9 @@
-package fr.gamer2082.ascamod.managers;
+package fr.Ascaria.ascamod.managers;
 
-import fr.gamer2082.ascamod.Ascamod;
-import fr.gamer2082.ascamod.listeners.modCancel;
-import fr.gamer2082.ascamod.listeners.moderatorInteracEvent;
-import fr.gamer2082.ascamod.listeners.quitEvent;
+import fr.Ascaria.ascamod.Ascamod;
+import fr.Ascaria.ascamod.listeners.modCancel;
+import fr.Ascaria.ascamod.listeners.moderatorInteracEvent;
+import fr.Ascaria.ascamod.listeners.quitEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 

@@ -1,7 +1,7 @@
-package fr.gamer2082.ascamod.listeners;
+package fr.Ascaria.ascamod.listeners;
 
-import fr.gamer2082.ascamod.Ascamod;
-import fr.gamer2082.ascamod.managers.playerManagers;
+import fr.Ascaria.ascamod.Ascamod;
+import fr.Ascaria.ascamod.managers.playerManagers;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

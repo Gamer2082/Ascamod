@@ -1,10 +1,9 @@
-package fr.gamer2082.ascamod;
+package fr.Ascaria.ascamod;
 
-import fr.gamer2082.ascamod.command.modCmdExecutor;
-import fr.gamer2082.ascamod.managers.EventManager;
-import fr.gamer2082.ascamod.managers.managment;
-import fr.gamer2082.ascamod.managers.playerManagers;
-import org.bukkit.entity.Player;
+import fr.Ascaria.ascamod.command.modCmdExecutor;
+import fr.Ascaria.ascamod.managers.EventManager;
+import fr.Ascaria.ascamod.managers.managment;
+import fr.Ascaria.ascamod.managers.playerManagers;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package fr.gamer2082.ascamod.listeners;
+package fr.Ascaria.ascamod.listeners;
 
-import fr.gamer2082.ascamod.managers.playerManagers;
+import fr.Ascaria.ascamod.managers.playerManagers;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

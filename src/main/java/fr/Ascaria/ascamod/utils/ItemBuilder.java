@@ -1,4 +1,4 @@
-package fr.gamer2082.ascamod.utils;
+package fr.Ascaria.ascamod.utils;
 
 import org.bukkit.Color;
 import org.bukkit.Material;
