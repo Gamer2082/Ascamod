@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'fr.gamer2082'
+group = 'fr.ascaria'
 version = '1.0'
 
 repositories {
