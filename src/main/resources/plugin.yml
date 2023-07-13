@@ -1,0 +1,14 @@
+name: Ascamod
+version: '${version}'
+main: fr.gamer2082.ascamod.Ascamod
+api-version: '1.16'
+prefix: asmd
+load: STARTUP
+authors: [Gamer_m2082]
+description: Ascaria moderator tools by Gamer_m2082
+website: https://ascaria.fr
+commands:
+  mod:
+    description: enter to the mod list
+    permission: mod.join
+
