@@ -1,6 +1,6 @@
 name: Ascamod
 version: '${version}'
-main: fr.gamer2082.ascamod.Ascamod
+main: fr.Ascaria.ascamod.Ascamod
 api-version: '1.16'
 prefix: asmd
 load: STARTUP
@@ -11,4 +11,5 @@ commands:
   mod:
     description: enter to the mod list
     permission: mod.join
+
 

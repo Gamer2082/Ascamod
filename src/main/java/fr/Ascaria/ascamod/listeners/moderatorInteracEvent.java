@@ -1,5 +1,6 @@
 package fr.Ascaria.ascamod.listeners;
 
+import fr.Ascaria.ascamod.Ascamod;
 import fr.Ascaria.ascamod.managers.playerManagers;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.Inventory;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,10 +47,13 @@ public class moderatorInteracEvent implements Listener {
                 target.damage(target.getHealth() + 1f);
                 break;
             case PACKED_ICE:
-                /*
-                *TODO
-                */
-                break;
+                if (playerManagers.isFreezed(target)) {
+                    Ascamod.instance.freezList.remove(target.getUniqueId());
+                    return;
+                }
+                Ascamod.instance.freezList.add(target.getUniqueId());
+                    break;
+
             default: break;
         }
     }
@@ -58,11 +63,11 @@ public class moderatorInteracEvent implements Listener {
         if (!playerManagers.isModerator(player)) return;
         if (e.getAction() != Action.RIGHT_CLICK_AIR && e.getAction() != Action.RIGHT_CLICK_BLOCK) return;
         switch (player.getInventory().getItemInMainHand().getType()){
-            case ENDER_PEARL:
+            case ENDER_EYE:
                 List<Player> list = new ArrayList<>(Bukkit.getOnlinePlayers());
                 list.remove(player);
                 if (list.size() == 0){
-                    player.sendMessage("Aucun autre joueur connecté");
+                    player.sendMessage("Aucun autre joueur connecte");
                 return;
                 }
                 Player target = list.get(new Random().nextInt(list.size()));
@@ -72,6 +77,19 @@ public class moderatorInteracEvent implements Listener {
 
                 break;
             case BLAZE_POWDER:
+                if (playerManagers.isVanished(player)){
+                    for (Player players : Bukkit.getOnlinePlayers()){
+                        players.showPlayer(Ascamod.instance , player);
+
+                    }
+
+                    return;
+                }
+                for (Player players : Bukkit.getOnlinePlayers()){
+                    players.hidePlayer(Ascamod.instance , player);
+
+                }
+
 
                 break;
             default: break;

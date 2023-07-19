@@ -17,6 +17,7 @@ public class modCmdExecutor implements CommandExecutor {
 
 
 
+
         if (!player.hasPermission("mod.join")){
             player.sendMessage(ChatColor.RED + "Hum seul un moderateur peut le faire");
             return false;

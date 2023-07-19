@@ -15,6 +15,14 @@ public class playerManagers {
         return Ascamod.instance.modList.contains(player.getUniqueId());
 
     }
+    public static boolean isVanished(Player player){
+        return Ascamod.instance.vList.contains(player.getUniqueId());
+
+    }
+    public static boolean isFreezed(Player player){
+        return Ascamod.instance.freezList.contains(player.getUniqueId());
+
+    }
 
     public playerManagers(Player player){
         this.player = player;
@@ -28,7 +36,7 @@ public class playerManagers {
         ItemStack invSee = new ItemBuilder(Material.PAPER).setName(ChatColor.GREEN +"Voir inventaire").setLore("Click droit sur un joueur").toItemStack();
         ItemStack vanish = new ItemBuilder(Material.BLAZE_POWDER).setName(ChatColor.YELLOW +"Vanish").setLore("Click droit pour passer en vanish").toItemStack();
         ItemStack freeze = new ItemBuilder(Material.PACKED_ICE).setName(ChatColor.BLUE +"Freeze").setLore("Click droit sur un joueur").toItemStack();
-        ItemStack rbTp = new ItemBuilder(Material.ENDER_PEARL).setName(ChatColor.DARK_GREEN +"Aller a un joueur").setLore("Click droit pour","aller a un joueur").toItemStack();
+        ItemStack rbTp = new ItemBuilder(Material.ENDER_EYE).setName(ChatColor.DARK_GREEN +"Aller a un joueur").setLore("Click droit pour","aller a un joueur").toItemStack();
         ItemStack kbTester = new ItemBuilder(Material.STICK).setName(ChatColor.DARK_GRAY +"KB").setLore("Click guache test les kb").addUnsafeEnchantment(Enchantment.KNOCKBACK, 5).toItemStack();
         ItemStack playerKiller = new ItemBuilder(Material.DIAMOND_SWORD).setName(ChatColor.RED +"Killer").setLore("Click droit sur un joueur","pour le tuer").toItemStack();
 

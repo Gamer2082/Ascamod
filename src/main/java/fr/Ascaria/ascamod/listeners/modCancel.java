@@ -18,29 +18,40 @@ import org.bukkit.event.player.PlayerInteractEvent;
 public class modCancel implements Listener {
     @EventHandler
     public static void onItemDrop(PlayerDropItemEvent e){
-        e.setCancelled(playerManagers.isModerator(e.getPlayer()));
+        if(playerManagers.isModerator(e.getPlayer()) || playerManagers.isFreezed(e.getPlayer())){
+            e.setCancelled(true);
+        }
+
     }
     @EventHandler
     public static void onBlock(BlockPlaceEvent e){
-        e.setCancelled(playerManagers.isModerator(e.getPlayer()));
+        if(playerManagers.isModerator(e.getPlayer()) || playerManagers.isFreezed(e.getPlayer())){
+            e.setCancelled(true);
+        }
     }
     @EventHandler
     public void onBlockBr(BlockBreakEvent e){
-        e.setCancelled(playerManagers.isModerator(e.getPlayer()));
+        if(playerManagers.isModerator(e.getPlayer()) || playerManagers.isFreezed(e.getPlayer())){
+            e.setCancelled(true);
+        }
     }
     @EventHandler
     public void onItemPickup(EntityPickupItemEvent e){
         if (!(e.getEntity() instanceof Player)){
             return;
         }
-        e.setCancelled(playerManagers.isModerator((Player) e.getEntity()));
+        if(playerManagers.isModerator((Player) e.getEntity()) || playerManagers.isFreezed((Player) e.getEntity())){
+            e.setCancelled(true);
+        }
     }
     @EventHandler
     public void onEntityDm(EntityDamageEvent e){
         if (!(e.getEntity() instanceof Player)){
             return;
         }
-        e.setCancelled(playerManagers.isModerator((Player) e.getEntity()));
+        if(playerManagers.isModerator((Player) e.getEntity()) || playerManagers.isFreezed((Player) e.getEntity())){
+            e.setCancelled(true);
+        }
     }
     @EventHandler
     public void damageByEntity(EntityDamageByEntityEvent e){
@@ -54,15 +65,22 @@ public class modCancel implements Listener {
         if (playerManagers.isModerator(Damager)){
             e.setCancelled(Damager.getInventory().getItemInMainHand().getType() != Material.STICK);
         }
+        if (playerManagers.isFreezed(Damager)){
+            e.setCancelled(true);
+        }
 
     }
     @EventHandler
     public void onInteract(PlayerInteractEvent e){
-        e.setCancelled(playerManagers.isModerator(e.getPlayer()));
+        if(playerManagers.isModerator(e.getPlayer()) || playerManagers.isFreezed(e.getPlayer())){
+            e.setCancelled(true);
+        }
     }
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e){
-        e.setCancelled(playerManagers.isModerator((Player) e.getWhoClicked()));
+        if(playerManagers.isModerator((Player) e.getWhoClicked()) || playerManagers.isFreezed((Player) e.getWhoClicked())){
+            e.setCancelled(true);
+        }
     }
 
 

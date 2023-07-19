@@ -12,6 +12,8 @@ import java.util.UUID;
 
 public final class Ascamod extends JavaPlugin {
     public ArrayList<UUID> modList = new ArrayList<>();
+    public ArrayList<UUID> vList = new ArrayList<>();
+    public ArrayList<UUID> freezList = new ArrayList<>();
     public boolean isVanish;
     public HashMap<UUID, playerManagers> players = new HashMap<>();
     public static Ascamod instance;
@@ -21,7 +23,7 @@ public final class Ascamod extends JavaPlugin {
         instance = this;
 
         new EventManager().registers();
-        getCommand("mod").setExecutor(new modCmdExecutor());
+
         // Plugin startup logic
         managment.load();
 
