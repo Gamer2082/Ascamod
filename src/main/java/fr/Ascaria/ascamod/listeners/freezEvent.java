@@ -16,7 +16,7 @@ public class freezEvent implements Listener {
         if (playerManagers.isFreezed(player)){
             player.sendTitle("Un moderateur vous a freez","venez sur discord");
             player.sendMessage("Un moderateur vous a freez venez sur discord : /discord");
-            if (from.getX() == to.getX() && from.getY() == to.getY() && from.getZ() == to.getZ()) {
+            if (from.getX() != to.getX() && from.getY() != to.getY() && from.getZ() != to.getZ()) {
                 e.setCancelled(true); // Annuler le déplacement par défaut
                 player.teleport(to); // Déplacer manuellement le joueur à sa position actuelle
             }
